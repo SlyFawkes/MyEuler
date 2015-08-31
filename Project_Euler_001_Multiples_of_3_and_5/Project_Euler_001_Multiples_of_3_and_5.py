@@ -6,9 +6,10 @@ Created on 21 Nov 2014
 
 listOfNumbers = []
 
+
 def multiple3(n):
     i = 0
-    while i < 1000:
+    while i < n:
         
         if i not in listOfNumbers:
             listOfNumbers.append(i)
@@ -25,15 +26,17 @@ def multiple5(n):
             print j
         j += 5
 
-def addListNumbers():
+
+def add_list_numbers():
     total = 0
     for item in listOfNumbers:
         total += item
     return total
 
+
 def run(n):
     multiple3(n)
     multiple5(n)
-    print addListNumbers()
+    print add_list_numbers()
     
 run(1000)

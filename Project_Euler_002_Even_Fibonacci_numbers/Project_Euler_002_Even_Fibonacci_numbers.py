@@ -4,28 +4,30 @@ Created on 21 Nov 2014
 @author: dean
 '''
 
-def fibbonacci(maxValue):
+
+def fibbonacci(max_value):
     i = 1
     j = 2
     k = 0
-    allFibNums = [1,2]
-    while k < maxValue:
-        allFibNums.append(k)
+    all_fib_nums = [1, 2]
+    while k < max_value:
+        all_fib_nums.append(k)
         k = i+j
-        i=j
-        j=k
-    return allFibNums
+        i = j
+        j = k
+    return all_fib_nums
 
-def addAllEven(theList):
+
+def add_all_even(the_list):
     total = 0
-    for item in theList:
+    for item in the_list:
         if item % 2 == 0:
             total += item
     return total
 
-def run(maxValue):
-    theList = fibbonacci(maxValue)
-    print addAllEven(theList)
+
+def run(max_value):
+    the_list = fibbonacci(max_value)
+    print add_all_even(the_list)
 
 run(4000000)
-            

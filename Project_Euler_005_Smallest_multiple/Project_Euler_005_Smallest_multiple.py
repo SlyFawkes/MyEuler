@@ -4,23 +4,26 @@ Created on 24 Nov 2014
 @author: dean
 '''
 primeFactors = []
-def detAllPrimes(number, i):
+
+
+def det_all_primes(number, i):
     for item in primeFactors:
         if number%item == 0:
             number = number/item
     while i <= number:
         if number % i == 0:
             primeFactors.append(i)
-            detAllPrimes(number/i, i)
+            det_all_primes(number/i, i)
             break
-        i +=1
+        i += 1
 
-def getLCM(n):
+
+def get_lcm(n):
     for t in xrange(n+1):
-        detAllPrimes(t, 2)
-    totalProduct = 1
+        det_all_primes(t, 2)
+    total_product = 1
     for item in primeFactors:
-        totalProduct *= item
-    print totalProduct
+        total_product *= item
+    print total_product
 
-getLCM(20)
+get_lcm(20)
