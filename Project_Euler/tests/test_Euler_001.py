@@ -1,5 +1,5 @@
 import unittest
-from Project_Euler.Project_Euler import Project_Euler_001_Multiples_of_3_and_5
+from Project_Euler.Solutions import Project_Euler_001_Multiples_of_3_and_5
 
 
 class TestEuler001(unittest.TestCase):

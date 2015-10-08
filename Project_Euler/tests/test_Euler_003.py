@@ -1,9 +1,9 @@
 import unittest
-from Project_Euler import Project_Euler_003_Largest_prime_factor
+from Project_Euler.Solutions import Project_Euler_003_Largest_prime_factor
 
 
-class TestEuler001(unittest.TestCase):
+class TestEuler003(unittest.TestCase):
 
-    def test_fibbonacci(self):
-        answer = Project_Euler_003_Largest_prime_factor.det_first_prime(600851475143, 2)
+    def test_largest_prime_factor(self):
+        answer = Project_Euler_003_Largest_prime_factor.largest_prime_factor(600851475143)
         self.assertEqual(answer, 6857)

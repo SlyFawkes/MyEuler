@@ -1,5 +1,5 @@
 import unittest
-from Project_Euler.Project_Euler import Project_Euler_002_Even_Fibonacci_numbers
+from Project_Euler.Solutions import Project_Euler_002_Even_Fibonacci_numbers
 
 
 class TestEuler001(unittest.TestCase):
