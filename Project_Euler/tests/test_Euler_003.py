@@ -7,3 +7,6 @@ class TestEuler003(unittest.TestCase):
     def test_largest_prime_factor(self):
         answer = Project_Euler_003_Largest_prime_factor.largest_prime_factor(600851475143)
         self.assertEqual(answer, 6857)
+
+if __name__ == '__main__':
+    unittest.main()
