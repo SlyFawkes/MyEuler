@@ -20,6 +20,4 @@ def smallest_multiple(n):
     total_product = 1
     for item in primeFactors:
         total_product *= item
-    print total_product
-
-smallest_multiple(20)
+    return total_product
