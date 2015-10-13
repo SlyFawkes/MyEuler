@@ -1,23 +1,16 @@
 
-primeFactors = []
 
-
-def det_all_primes(number, i):
-    for item in primeFactors:
-        if number % item == 0:
-            number = number/item
-    while i <= number:
-        if number % i == 0:
-            primeFactors.append(i)
-            det_all_primes(number/i, i)
-            break
-        i += 1
+def get_unique_primes(number):
+    unique_prime_factors = []
+    for value in xrange(2, number+1):
+        for prime in unique_prime_factors:
+            if value % prime == 0:
+                value = value/prime
+        unique_prime_factors.append(value)
+    return unique_prime_factors
 
 
 def smallest_multiple(n):
-    for t in xrange(n+1):
-        det_all_primes(t, 2)
-    total_product = 1
-    for item in primeFactors:
-        total_product *= item
+    unique_prime_factors = get_unique_primes(n)
+    total_product = reduce(lambda x, y: x*y, unique_prime_factors)
     return total_product
