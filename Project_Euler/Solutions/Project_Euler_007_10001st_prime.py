@@ -13,7 +13,7 @@ def find_nth_prime(k):
                 j += 2
                 u = 1
             elif p**2 > j:
-                    break
+                break
             else:
                 u += 1
 
@@ -21,5 +21,3 @@ def find_nth_prime(k):
         j += 2
         t += 1
     return primes[-1]
-
-find_nth_prime(10001)
