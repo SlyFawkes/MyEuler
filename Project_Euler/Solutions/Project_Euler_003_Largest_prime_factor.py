@@ -1,5 +1,7 @@
 
 def largest_prime_factor(number):
+    if number <= 1:
+        return 0
     divisor = 2
     while divisor <= number/2:
         if number % divisor == 0:
@@ -7,6 +9,3 @@ def largest_prime_factor(number):
         else:
             divisor += 1
     return number
-
-
-
