@@ -1,6 +1,8 @@
 
 
 def largest_palindrome(n):
+    if n <= 0:
+        return 0
     largest = 0
     for i in xrange(10**n, 10**(n-1), -1):
         for j in xrange(i, 10**(n-1), -1):
@@ -13,7 +15,7 @@ def largest_palindrome(n):
 
 
 def check_if_palindrome(to_check):
-    string_to_check = str(to_check)
+    string_to_check = str(abs(to_check))
     if string_to_check[::-1] == string_to_check:
         return True
 
