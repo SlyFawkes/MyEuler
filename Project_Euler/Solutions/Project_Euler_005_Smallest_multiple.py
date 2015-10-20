@@ -1,5 +1,10 @@
 
 def smallest_multiple(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+
     unique_prime_factors = []
 
     for value in xrange(2, n+1):
