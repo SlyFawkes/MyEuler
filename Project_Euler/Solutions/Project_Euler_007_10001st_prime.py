@@ -1,23 +1,25 @@
 
-def find_nth_prime(k):
-    primes = [2, 3]
+def find_nth_prime(nth_prime):
+    primes_list = [2, 3]
+    check_if_prime = 5
+    list_length = 2
+    offset = 2
 
-    t = 2
-    j = primes[-1] + 2
+    while list_length < nth_prime:
 
-    while t < k:
-        u = 1
-        while u < t:
-            p = primes[u]
-            if j % p == 0:
-                j += 2
-                u = 1
-            elif p**2 > j:
+        for prime in primes_list:
+
+            if check_if_prime % prime == 0:
                 break
-            else:
-                u += 1
 
-        primes.append(j)
-        j += 2
-        t += 1
-    return primes[-1]
+            elif prime**2 > check_if_prime:
+                primes_list.append(check_if_prime)
+                list_length += 1
+                break
+
+        check_if_prime += offset
+        offset = 6 - offset
+
+    return primes_list[-1]
+
+print find_nth_prime(10001)
