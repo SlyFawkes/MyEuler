@@ -3,17 +3,15 @@ theString = "7316717653133062491922511967442657474235534919493496983520312774506
 
 
 def biggest_adj_product(number_as_string, length):
-    all_numbers = []
-    for i in xrange(len(number_as_string)-length+1):
-        all_numbers.append(number_as_string[i: i+length])
-    all_products = []
-    while len(all_numbers) > 0:
-        current = all_numbers.pop()
-        total = 1
-        for i in xrange(length):
-            total *= int(current[i])
-        all_products.append(total)
-    all_products.sort()
-    return all_products[-1]
+    largest = 0
 
-print biggest_adj_product(theString, 13)
+    for i in xrange(len(number_as_string)-length+1):
+        current = number_as_string[i: i+length]
+        total = 1
+
+        for j in xrange(length):
+            total *= int(current[j])
+
+        largest = max(largest, total)
+
+    return largest

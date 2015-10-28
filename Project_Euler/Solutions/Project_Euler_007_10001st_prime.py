@@ -22,4 +22,3 @@ def find_nth_prime(nth_prime):
 
     return primes_list[-1]
 
-print find_nth_prime(10001)
