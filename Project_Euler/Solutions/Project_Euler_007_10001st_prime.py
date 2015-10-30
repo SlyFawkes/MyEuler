@@ -1,5 +1,11 @@
 
 def find_nth_prime(nth_prime):
+
+    if nth_prime == 1:
+        return 2
+    elif nth_prime < 1:
+        return 0
+
     primes_list = [2, 3]
     check_if_prime = 5
     list_length = 2
