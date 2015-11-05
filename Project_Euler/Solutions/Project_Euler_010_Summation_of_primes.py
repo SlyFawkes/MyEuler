@@ -6,11 +6,11 @@ def find_all_primes_below(k):
     j = prime_list[-1] + 2
 
     while j < k:
-        u=1
+        u = 1
         while u < t:
             p = prime_list[u]
-            if j%p == 0:
-                j +=2
+            if j % p == 0:
+                j += 2
                 u = 1
             elif p**2 > j:
                 break
