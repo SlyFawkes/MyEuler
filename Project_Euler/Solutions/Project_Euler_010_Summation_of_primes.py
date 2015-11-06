@@ -23,8 +23,10 @@ def find_all_primes_below(k):
     prime_list.pop()
     return prime_list
 
-primes = find_all_primes_below(1000)
-total = 0
-for item in primes:
-    total += item
-print total
+
+def summation_of_primes(n):
+    primes = find_all_primes_below(n)
+    total = 0
+    for item in primes:
+        total += item
+    return total
